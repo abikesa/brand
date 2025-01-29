@@ -1,5 +1,5 @@
 (victory)=
-# Victory & Improvement, *r*
+# Religion, *r*
 
 *Y'already know!*     
 -- Tyrone
