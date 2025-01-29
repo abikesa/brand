@@ -19,7 +19,7 @@ _Geopolitics: Resources, Needs, Costs, Supply, Demand_. Everyone is talking abou
 ```{bibliography}
 ```
 
-1. Theomarchy & Principalities (Resources, Cosmology-Geology), [y](https://github.com/smart-stats/ds4bio_book?tab=readme-ov-file) ([odds](https://www.the-independent.com/news/world/americas/obama-situation-room-white-house-president-decision-making-a8378186.html))
+1. Theomarchy & Principalities ([Resources](https://smart-stats.github.io/ds4bio_book/book/_build/html/logistic.html), Cosmology-Geology), [y](https://github.com/smart-stats/ds4bio_book?tab=readme-ov-file) ([odds](https://www.the-independent.com/news/world/americas/obama-situation-room-white-house-president-decision-making-a8378186.html))
    - Fixed: Coin toss, Dice roll, Roulette spin
    - Inheritence: Immutable laws & resources
    - Code: Costs, Supply, Demand
