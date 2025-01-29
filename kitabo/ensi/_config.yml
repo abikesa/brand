@@ -7,7 +7,7 @@
 title                       : Brand # The title of the book. Will be placed in the left navbar.
 author                      :  # The author of the book
 copyright                   : "2025"  # Copyright year to be placed in the footer
-logo                        : https://upload.wikimedia.org/wikipedia/commons/0/06/War_flag_of_the_Imperial_Japanese_Army.svg # Path to the logo image file
+logo                        : https://upload.wikimedia.org/wikipedia/en/d/d3/Starbucks_Corporation_Logo_2011.svg # Path to the logo image file
 email                       : "abikesa.sh@gmail.com"
 exclude_patterns            : ["LICENSE.md"]  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
 
