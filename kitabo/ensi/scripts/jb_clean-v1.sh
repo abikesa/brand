@@ -28,6 +28,8 @@ for src in "${!DIRS[@]}"; do
     fi
 done
 
+
+
 # Older version of the script
 
 # mkdir -p _build/html/pdfs _build/html/figures _build/html/media _build/html/data _build/html/testbin _build/html/testbin_dec2024 _build/html/nis
