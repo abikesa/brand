@@ -1,5 +1,5 @@
 (victory)=
-# Religion, *r*
+# Religion, *r* 😃 ⭕️
 
 *Y'already know!*     
 -- Tyrone
