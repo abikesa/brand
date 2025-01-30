@@ -18,12 +18,16 @@ for src in "${!DIRS[@]}"; do
     
     # Always create the destination directory
     mkdir -p "$dest"
+    echo "Created directory: $dest"
 
-    # If source directory exists and has files, copy them
+    # If source exists, copy files (even if empty)
     if [ -d "$src" ]; then
-        cp -r "$src"/* "$dest/" 2>/dev/null || true  # Suppress errors if the source is empty
+        cp -r "$src"/* "$dest/" 2>/dev/null || echo "No files to copy from $src"
+    else
+        echo "Warning: Source directory $src does not exist!"
     fi
 done
+
 
 
 # Older version of the script
