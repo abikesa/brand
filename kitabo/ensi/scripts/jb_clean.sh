@@ -12,18 +12,19 @@ declare -A DIRS=(
     ["nis"]="_build/html/nis"
 )
 
-# Iterate over defined directories, create them dynamically, and copy files if they exist
+# Iterate over defined directories, ensuring they are created in _build/html
 for src in "${!DIRS[@]}"; do
     dest="${DIRS[$src]}"
     
-    # Create destination directory if it doesn't exist
+    # Always create the destination directory
     mkdir -p "$dest"
 
-    # Check if source directory exists and is non-empty before copying
-    if [ -d "$src" ] && [ "$(ls -A "$src" 2>/dev/null)" ]; then
-        cp -r "$src"/* "$dest/"
+    # If source directory exists and has files, copy them
+    if [ -d "$src" ]; then
+        cp -r "$src"/* "$dest/" 2>/dev/null || true  # Suppress errors if the source is empty
     fi
 done
+
 
 # Older version of the script
 
