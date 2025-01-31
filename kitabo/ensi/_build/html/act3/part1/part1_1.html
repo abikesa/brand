@@ -61,6 +61,8 @@
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'act3/part1/part1_1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -404,7 +406,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transvaluation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-spaces-and-optimization-across-music-survival-analysis-and-finance"><strong>Combinatorial Spaces and Optimization Across Music, Survival Analysis, and Finance</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-spaces-and-optimization-across-music-survival-analysis-and-finance"><strong>Combinatorial Spaces and Optimization Across Music, Survival Analysis, and Finance</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#music-the-optimization-of-cadence"><strong>Music: The Optimization of Cadence</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#survival-analysis-the-optimization-of-relative-risk"><strong>Survival Analysis: The Optimization of Relative Risk</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-the-optimization-of-expected-value-in-option-pricing"><strong>Finance: The Optimization of Expected Value in Option Pricing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-and-divergence-the-sacrificial-altar-of-parametric-models"><strong>Convergence and Divergence: The Sacrificial Altar of Parametric Models</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
@@ -430,51 +438,39 @@ document.write(`
 <a class="reference internal image-reference" href="act3/figures/blanche.*"><img alt="act3/figures/blanche.*" src="act3/figures/blanche.*" style="width: 1px; height: 1px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 21 </span><span class="caption-text"><em>What Exactly is Identity</em>. A node may represent goats (in general) and another sheep (in general). But the identity of any specific animal (not its species) is a network. For this reason we might have a “black sheep”, distinct in certain ways – perhaps more like a goat than other sheep. But that’s all dull stuff. Mistaken identity is often the fuel of comedy, usually when the adversarial is mistaken for the cooperative or even the transactional.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-<div class="legend">
-<div class="highlight-optimization notranslate"><div class="highlight"><pre><span></span>
-#### **Music: The Optimization of Cadence**
- 
-In music, the exponential structure of equal temperament (where each semitone is tuned as $ f_n = 440 \times 2^{n/12} $) enables a vast combinatorial space of harmonic possibilities. The optimization problem in music is fundamentally one of expectation: the listener is guided through cycles of tension and resolution, with the cadence serving as the key point of satisfaction or frustration. The cycle of fifths, voice leading, chromatic modulations, and non-diatonic insertions all function as transformations that alter the expectation of resolution. The underlying intelligence in this optimization process is historical and cultural—the &quot;data&quot; comes from centuries of musical traditions, stylistic innovations, and the evolved neural responses of human cognition to harmonic progression. Just as certain paths in Cox regression are more likely given the survival curves of past populations, certain chord progressions carry emotional weight based on their historical and cultural frequency. 
-
-Yet, the equal temperament tuning system itself is a compromise, sacrificing the purity of harmonic overtones to enable modulation across all keys. The harmonic series—nature’s own tuning system—produces irrational frequency ratios that do not fit neatly into a system of 12 equal steps. In sacrificing just intonation, we gain an expandable, infinite harmonic space, but at the cost of an ever-present, almost imperceptible dissonance. This is the fundamental trade-off of parametric models: smooth generalization at the cost of localized precision.
-
-#### **Survival Analysis: The Optimization of Relative Risk**
-
-Cox proportional hazards regression follows a structurally similar mathematical form, where the probability of survival at a given time $ t $ is conditioned on a baseline hazard function $ h_0(t) $ multiplied by an exponential term:  
-
-$$
-h(t) = h_0(t) \times e^{\beta X}
-$$
-
-Here, the optimization problem is one of risk stratification—determining the probability that an individual with a given set of covariates $ X $ will experience an event (such as death, disease progression, or recovery) relative to a baseline group. This baseline group serves the same role as A440 in music: it is a reference point from which variations emerge. The exponentiated term, akin to the 12th-root-of-2 structure in equal temperament, allows for multiplicative scaling across different risk profiles. 
-
-The intelligence in survival analysis comes from epidemiological data, often extracted from national databases, electronic health records, or clinical trials. Unlike music, where the data emerges organically from creative evolution, survival analysis depends on structured, carefully collected data with well-defined endpoints. However, like equal temperament, Cox regression simplifies a more complex reality: it assumes proportional hazards, meaning the effect of a given risk factor remains constant over time. This is often not the case in real-world survival data, just as equal temperament is not the &quot;natural&quot; tuning system of harmonic series. When the assumption breaks down—when risk factors interact in non-linear or time-varying ways—the parametric model can mislead, sacrificing accuracy for mathematical tractability.
-
-#### **Finance: The Optimization of Expected Value in Option Pricing**
-
-In finance, the Black-Scholes model for European options follows a similar structural transformation, where the price of an option is given by:
-
-$$
-C = S_0 N(d_1) - Ke^{-rT} N(d_2)
-$$
-
-Here, $ S_0 $ represents the current asset price (analogous to the baseline hazard or A440), while the exponential discounting term $ e^{-rT} $ mirrors the decay structure seen in Cox regression. The optimization problem is one of expectation: given an underlying asset and a time to maturity $ T $, what is the fair price of an option today? The combinatorial space is vast, allowing for hedging strategies, arbitrage opportunities, and derivatives of derivatives that layer exponentially. 
-
-The intelligence in financial modeling comes from market data—historical volatility, interest rates, and asset price movements. But, just as in equal temperament and survival analysis, the parametric form imposes a cost: it assumes log-normality in returns and smooth volatility dynamics, which, as history has shown, do not hold in extreme events. The financial crisis of 2008 was, in part, a failure of this parametric assumption. The tails of the distribution—akin to the enharmonic dissonances in music or the time-varying effects in Cox regression—were underestimated, leading to systemic collapse. The same elegant structure that makes financial engineering possible also makes it precarious when its assumptions are stretched beyond their intended domain.
-
-#### **Convergence and Divergence: The Sacrificial Altar of Parametric Models**
-
-In all three cases—music, survival analysis, and finance—the core structure consists of a baseline value modified by an exponential transformation. This mathematical consistency enables generalization and prediction but at the cost of local precision. Equal temperament sacrifices pure intervals for modularity, Cox regression sacrifices individual trajectories for proportionality, and Black-Scholes sacrifices tail risk for tractability. These sacrifices are what allow each field to construct vast combinatorial spaces, but they also introduce blind spots that can lead to aesthetic compromises, medical mispredictions, or financial disasters.
-
-If we ask what is ultimately being optimized, the answer varies: in music, it is the listener’s expectation and resolution of cadence; in survival analysis, it is the relative risk estimation across populations; in finance, it is the expected value of future payouts. But all three require structured, historical data—whether from musical traditions, clinical trials, or market trends—to generate meaningful intelligence. The irony is that while these models enable powerful generative structures, they remain vulnerable to their own assumptions. When these assumptions fail, the sacrifices made at the altar of mathematical elegance come back to haunt us, often in the form of unexpected dissonances, survival paradoxes, or financial crises. 
-
-In the end, what we are truly optimizing is not just a function but an epistemology—the balance between abstraction and fidelity, between the infinite and the precise. The parametric structures that define our models are both our greatest tools and our most dangerous illusions.
-
-</pre></div>
-</div>
-</div>
 </figcaption>
 </figure>
+<p>optimization strategies.</p>
+<section id="music-the-optimization-of-cadence">
+<h3><strong>Music: The Optimization of Cadence</strong><a class="headerlink" href="#music-the-optimization-of-cadence" title="Permalink to this heading">#</a></h3>
+<p>In music, the exponential structure of equal temperament (where each semitone is tuned as <span class="math notranslate nohighlight">\( f_n = 440 \times 2^{n/12} \)</span>) enables a vast combinatorial space of harmonic possibilities. The optimization problem in music is fundamentally one of expectation: the listener is guided through cycles of tension and resolution, with the cadence serving as the key point of satisfaction or frustration. The cycle of fifths, voice leading, chromatic modulations, and non-diatonic insertions all function as transformations that alter the expectation of resolution. The underlying intelligence in this optimization process is historical and cultural—the “data” comes from centuries of musical traditions, stylistic innovations, and the evolved neural responses of human cognition to harmonic progression. Just as certain paths in Cox regression are more likely given the survival curves of past populations, certain chord progressions carry emotional weight based on their historical and cultural frequency.</p>
+<p>Yet, the equal temperament tuning system itself is a compromise, sacrificing the purity of harmonic overtones to enable modulation across all keys. The harmonic series—nature’s own tuning system—produces irrational frequency ratios that do not fit neatly into a system of 12 equal steps. In sacrificing just intonation, we gain an expandable, infinite harmonic space, but at the cost of an ever-present, almost imperceptible dissonance. This is the fundamental trade-off of parametric models: smooth generalization at the cost of localized precision.</p>
+</section>
+<section id="survival-analysis-the-optimization-of-relative-risk">
+<h3><strong>Survival Analysis: The Optimization of Relative Risk</strong><a class="headerlink" href="#survival-analysis-the-optimization-of-relative-risk" title="Permalink to this heading">#</a></h3>
+<p>Cox proportional hazards regression follows a structurally similar mathematical form, where the probability of survival at a given time <span class="math notranslate nohighlight">\( t \)</span> is conditioned on a baseline hazard function <span class="math notranslate nohighlight">\( h_0(t) \)</span> multiplied by an exponential term:</p>
+<div class="math notranslate nohighlight">
+\[
+h(t) = h_0(t) \times e^{\beta X}
+\]</div>
+<p>Here, the optimization problem is one of risk stratification—determining the probability that an individual with a given set of covariates <span class="math notranslate nohighlight">\( X \)</span> will experience an event (such as death, disease progression, or recovery) relative to a baseline group. This baseline group serves the same role as A440 in music: it is a reference point from which variations emerge. The exponentiated term, akin to the 12th-root-of-2 structure in equal temperament, allows for multiplicative scaling across different risk profiles.</p>
+<p>The intelligence in survival analysis comes from epidemiological data, often extracted from national databases, electronic health records, or clinical trials. Unlike music, where the data emerges organically from creative evolution, survival analysis depends on structured, carefully collected data with well-defined endpoints. However, like equal temperament, Cox regression simplifies a more complex reality: it assumes proportional hazards, meaning the effect of a given risk factor remains constant over time. This is often not the case in real-world survival data, just as equal temperament is not the “natural” tuning system of harmonic series. When the assumption breaks down—when risk factors interact in non-linear or time-varying ways—the parametric model can mislead, sacrificing accuracy for mathematical tractability.</p>
+</section>
+<section id="finance-the-optimization-of-expected-value-in-option-pricing">
+<h3><strong>Finance: The Optimization of Expected Value in Option Pricing</strong><a class="headerlink" href="#finance-the-optimization-of-expected-value-in-option-pricing" title="Permalink to this heading">#</a></h3>
+<p>In finance, the Black-Scholes model for European options follows a similar structural transformation, where the price of an option is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+C = S_0 N(d_1) - Ke^{-rT} N(d_2)
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\( S_0 \)</span> represents the current asset price (analogous to the baseline hazard or A440), while the exponential discounting term <span class="math notranslate nohighlight">\( e^{-rT} \)</span> mirrors the decay structure seen in Cox regression. The optimization problem is one of expectation: given an underlying asset and a time to maturity <span class="math notranslate nohighlight">\( T \)</span>, what is the fair price of an option today? The combinatorial space is vast, allowing for hedging strategies, arbitrage opportunities, and derivatives of derivatives that layer exponentially.</p>
+<p>The intelligence in financial modeling comes from market data—historical volatility, interest rates, and asset price movements. But, just as in equal temperament and survival analysis, the parametric form imposes a cost: it assumes log-normality in returns and smooth volatility dynamics, which, as history has shown, do not hold in extreme events. The financial crisis of 2008 was, in part, a failure of this parametric assumption. The tails of the distribution—akin to the enharmonic dissonances in music or the time-varying effects in Cox regression—were underestimated, leading to systemic collapse. The same elegant structure that makes financial engineering possible also makes it precarious when its assumptions are stretched beyond their intended domain.</p>
+</section>
+<section id="convergence-and-divergence-the-sacrificial-altar-of-parametric-models">
+<h3><strong>Convergence and Divergence: The Sacrificial Altar of Parametric Models</strong><a class="headerlink" href="#convergence-and-divergence-the-sacrificial-altar-of-parametric-models" title="Permalink to this heading">#</a></h3>
+<p>In all three cases—music, survival analysis, and finance—the core structure consists of a baseline value modified by an exponential transformation. This mathematical consistency enables generalization and prediction but at the cost of local precision. Equal temperament sacrifices pure intervals for modularity, Cox regression sacrifices individual trajectories for proportionality, and Black-Scholes sacrifices tail risk for tractability. These sacrifices are what allow each field to construct vast combinatorial spaces, but they also introduce blind spots that can lead to aesthetic compromises, medical mispredictions, or financial disasters.</p>
+<p>If we ask what is ultimately being optimized, the answer varies: in music, it is the listener’s expectation and resolution of cadence; in survival analysis, it is the relative risk estimation across populations; in finance, it is the expected value of future payouts. But all three require structured, historical data—whether from musical traditions, clinical trials, or market trends—to generate meaningful intelligence. The irony is that while these models enable powerful generative structures, they remain vulnerable to their own assumptions. When these assumptions fail, the sacrifices made at the altar of mathematical elegance come back to haunt us, often in the form of unexpected dissonances, survival paradoxes, or financial crises.</p>
+<p>In the end, what we are truly optimizing is not just a function but an epistemology—the balance between abstraction and fidelity, between the infinite and the precise. The parametric structures that define our models are both our greatest tools and our most dangerous illusions.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -565,6 +561,7 @@ In the end, what we are truly optimizing is not just a function but an epistemol
 </figure>
 </section>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="id2">
 <h1><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
 </section>
@@ -634,7 +631,13 @@ In the end, what we are truly optimizing is not just a function but an epistemol
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transvaluation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-spaces-and-optimization-across-music-survival-analysis-and-finance"><strong>Combinatorial Spaces and Optimization Across Music, Survival Analysis, and Finance</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-spaces-and-optimization-across-music-survival-analysis-and-finance"><strong>Combinatorial Spaces and Optimization Across Music, Survival Analysis, and Finance</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#music-the-optimization-of-cadence"><strong>Music: The Optimization of Cadence</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#survival-analysis-the-optimization-of-relative-risk"><strong>Survival Analysis: The Optimization of Relative Risk</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-the-optimization-of-expected-value-in-option-pricing"><strong>Finance: The Optimization of Expected Value in Option Pricing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-and-divergence-the-sacrificial-altar-of-parametric-models"><strong>Convergence and Divergence: The Sacrificial Altar of Parametric Models</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
