@@ -1,5 +1,5 @@
 (religion)=
-# Religion, *r* 😃 ⭕️
+# Religion, * γ* 😃 ⭕️
 
 *Y'already know!*     
 -- Tyrone
